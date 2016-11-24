@@ -25,6 +25,7 @@ int main(){
     }
     sort(keys,keys+N);
     int T = 0,i=0;
+    //非递归中序遍历，把值填到树中
     while(T!=-1||!v.empty()){
         while(T!=-1){
             v.push_back(T);
@@ -38,6 +39,7 @@ int main(){
             T = Tree[T].right;
         }
     }
+    //层序遍历输出
     T = 0;
     q.push(T);
    while(!q.empty()){
